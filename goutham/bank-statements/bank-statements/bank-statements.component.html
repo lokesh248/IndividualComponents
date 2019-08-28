@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert JSON Data to HTML Table</title>
+</head>
+<body>
+        <table>
+            <thead>
+                <th>DATE</th>
+                <th>Amount</th>
+                <th>Balance</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+          <tr *ngFor="let x of users">
+            <td>{{ x.Date }}</td>
+            <td>{{ x.Amount }}</td>
+            <td>{{ x.Balance }}</td>
+            <td>{{ x.Description}}</td>
+          </tr>
+        </tbody>
+        </table>
+        </body>
+</html>
