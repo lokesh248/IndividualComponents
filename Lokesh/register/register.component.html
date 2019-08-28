@@ -1,0 +1,87 @@
+<nav class="navbar navbar-nav" style="background-color:black; margin-bottom: 10px">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="index.html"><img src="
+                /assets/webbed.png" alt="Bootstrappin'"
+                    width="50"></a> 
+        <a class="navbar-brand" href="#">
+            <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;margin-top: 10px" style="color:red;font-size: 30px ">KLANG</p></a>
+        </div><li><p style="color: blue;font-size: 30px">Welcome,User!</p></li>
+                    <ul class="nav navbar-nav navbar-right">
+            <li><a href="./Home"><span class = "glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="register-div">
+    <h1>Registration Page</h1>
+</div>
+
+<form ngNativeValidate>
+    <div class="form-group text-div">
+        <label for="full_name">Full Name</label>
+        <input class="form-control" type="text" id="full_name" [(ngModel)]="Name" [ngModelOptions]="{standalone: true}" required />          
+    </div>
+    <div class="form-group text-div">
+        <label for="account_type">Account Type</label>
+        <select class="form-control" id="account_type" [(ngModel)]="TypeOfAccount" [ngModelOptions]="{standalone: true}" required >
+            <option value="" selected disabled>Select Here</option>
+            <option value="">Savings Type</option>
+            <option value="">Current Account</option>
+        </select>
+    </div>
+    <div class="form-group text-div">
+        <label for="income">Income</label>
+        <input type="number" class="form-control" [(ngModel)]="Income" [ngModelOptions]="{standalone: true}" id="income" required min="1000" />
+    </div>
+    <div class="form-group text-div">
+        <label for="aadhaar_number">Aadhaar Number</label>
+        <input type="text" class="form-control" id="aadhaar_number" [(ngModel)]="AadhaarNumber" [ngModelOptions]="{standalone: true}" required minlength="12" maxlength="12" min="0" />
+    </div>
+
+    <div class="form-group text-div">
+        <label for="aadhaar_scan">Aadhaar Scan</label>
+        <input type="file" class="form-control" id="aadhaar_scan" accept=".jpeg,.jpg,.png" required />
+    </div>
+
+    <div class="form-group text-div">
+        <label for="dob">Date of Birth</label>
+        <input type="date" class="form-control" [(ngModel)]="DOB" [ngModelOptions]="{standalone: true}" id="dob" required />
+    </div>
+
+    <div class="form-group text-div">
+        <label for="pan_number">PAN Number</label>
+        <input type="text" class="form-control" id="pan_number" [(ngModel)]="PAN" [ngModelOptions]="{standalone: true}" minlength="10" maxlength="10" required />
+    </div>
+
+    <div class="form-group text-div">
+        <label for="contact_number">Contact Number</label>
+        <input type="tel" class="form-control" id="contact_number" [(ngModel)]="Mobile" [ngModelOptions]="{standalone: true}" maxlength="10" minlength="10" required />
+    </div>
+
+    <div class="form-group text-div">
+        <label for="email_id">Email</label>
+        <input type="email" class="form-control" [(ngModel)]="Email" [ngModelOptions]="{standalone: true}" id="email_id" required />
+    </div>
+
+    <div class="form-group text-div">
+        <label for="address_proof">Address Proof Scan</label>
+        <input type="file" id="address_proof" class="form-control" accept=".jpeg,.jpg,.png,.pdf" required />
+    </div>
+
+    <div class="form-group text-div">
+        <label for="photograph">Photo of Yours</label>
+        <input type="file" class="form-control" id="photograph" accept=".jpeg,.jpg,.png" required />
+    </div>
+
+    <button type="submit" class="form-group text-div btn btn-primary">Register</button>
+</form>
+
+{{Name}} <br><br>
+{{TypeOfAccount}} <br><br>
+{{Income}} <br><br>
+{{AadhaarNumber}} <br><br>
+{{DOB}} <br><br>
+{{PAN}} <br><br>
+{{Mobile}} <br><br>
+{{Email}} <br><br>
