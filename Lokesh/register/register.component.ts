@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { RegisService } from "../regis.service";
+import { Consumer } from '../consumer';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +10,7 @@ import { FormsModule } from "@angular/forms";
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(public rs:RegisService) { }
 
   Name:string;
   AadhaarNumber:string;
@@ -24,7 +26,17 @@ export class RegisterComponent implements OnInit {
   AddressProofScan:any;
   Pic:any;
 
-  ngOnInit() {
+  consumer:Consumer;
+
+  ngOnInit()
+  {
+  }
+
+  public addUser()
+  {
+    this.consumer = new Consumer(1234, this.Name, this.TypeOfAccount, this.Income, this.AadhaarNumber, this.DOB, this.PAN, this.Mobile, this.Email);
+
+    this.rs.insertRec(this.consumer);
   }
 
 }

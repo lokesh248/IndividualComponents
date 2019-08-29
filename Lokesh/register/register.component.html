@@ -22,18 +22,26 @@
         <label for="full_name">Full Name</label>
         <input class="form-control" type="text" id="full_name" [(ngModel)]="Name" [ngModelOptions]="{standalone: true}" required />          
     </div>
-    <div class="form-group text-div">
+
+    <!-- <div class="form-group text-div">
         <label for="account_type">Account Type</label>
         <select class="form-control" id="account_type" [(ngModel)]="TypeOfAccount" [ngModelOptions]="{standalone: true}" required >
             <option value="" selected disabled>Select Here</option>
             <option value="">Savings Type</option>
             <option value="">Current Account</option>
         </select>
+    </div> -->
+
+    <div class="form-group text-div">
+        <label for="account_type">Account Type</label>
+        <input type="text" class="form-control" id="account_type" [(ngModel)]="TypeOfAccount" [ngModelOptions]="{standalone: true}" />
     </div>
+
     <div class="form-group text-div">
         <label for="income">Income</label>
         <input type="number" class="form-control" [(ngModel)]="Income" [ngModelOptions]="{standalone: true}" id="income" required min="1000" />
     </div>
+
     <div class="form-group text-div">
         <label for="aadhaar_number">Aadhaar Number</label>
         <input type="text" class="form-control" id="aadhaar_number" [(ngModel)]="AadhaarNumber" [ngModelOptions]="{standalone: true}" required minlength="12" maxlength="12" min="0" />
@@ -41,7 +49,7 @@
 
     <div class="form-group text-div">
         <label for="aadhaar_scan">Aadhaar Scan</label>
-        <input type="file" class="form-control" id="aadhaar_scan" accept=".jpeg,.jpg,.png" required />
+        <input type="file" class="form-control" id="aadhaar_scan" accept=".jpeg,.jpg,.png"/>
     </div>
 
     <div class="form-group text-div">
@@ -66,15 +74,15 @@
 
     <div class="form-group text-div">
         <label for="address_proof">Address Proof Scan</label>
-        <input type="file" id="address_proof" class="form-control" accept=".jpeg,.jpg,.png,.pdf" required />
+        <input type="file" id="address_proof" class="form-control" accept=".jpeg,.jpg,.png,.pdf"/>
     </div>
 
     <div class="form-group text-div">
         <label for="photograph">Photo of Yours</label>
-        <input type="file" class="form-control" id="photograph" accept=".jpeg,.jpg,.png" required />
+        <input type="file" class="form-control" id="photograph" accept=".jpeg,.jpg,.png"/>
     </div>
 
-    <button type="submit" class="form-group text-div btn btn-primary">Register</button>
+    <button (click)="addUser()" class="form-group text-div btn btn-primary">Register</button>
 </form>
 
 {{Name}} <br><br>
