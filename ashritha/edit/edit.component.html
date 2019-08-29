@@ -1,0 +1,21 @@
+<br><br>
+<form ngNativeValidate>
+
+    <p class="text-center h4 ">{{routeParam}}</p>
+<div *ngFor="let account of accounts">
+    <div *ngIf="routeParam==account.accNum" >
+    Full Name:<input type="text" name="fullName" [(ngModel)]="pName"  class="form-control"  placeholder="{{account.accName}}" required ><br>
+    Income:<input type="text" name="income" [(ngModel)]="pIncome" class="form-control" placeholder="{{account.income}}" required><br>
+    Aadhar Number:<input type="text" name="aadharNum" [(ngModel)]="pAadhar" class="form-control" placeholder="{{account.aadharNum}}" required><br>
+    Address:<input type="text" name="address" [(ngModel)]="pAddress" class="form-control" placeholder="{{account.address}}" required><br>
+    Date of Birth:<input type="text" name="dob" [(ngModel)]="pDob" class="form-control" placeholder="{{account.dob}}" required><br>
+    PAN Number<input type="text" name="panNum" [(ngModel)]="pPan" class="form-control" placeholder="{{account.panNum}}" required><br>
+    Mobile Number<input type="text" name="mobileNum" [(ngModel)]="pMobile" class="form-control" placeholder="{{account.mobileNum}}" required><br>
+    E-mail ID:<input type="email" name="email" [(ngModel)]="pEmail" class="form-control" placeholder="{{account.email}}" required><br>
+    </div>
+</div>
+    <button class="btn btn-info my-4 btn-block" type="submit" (click)="updateDetails()">Update</button>
+
+    <hr>
+
+</form>
