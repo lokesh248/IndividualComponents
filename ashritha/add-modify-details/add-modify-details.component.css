@@ -1,0 +1,27 @@
+.add{
+    height: 50px;
+    width: 100%;
+}
+.modify{
+    height: 50px;
+    width: 100%;
+}
+.changefont{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+.search-account {
+    max-width: 500px;
+    padding-bottom: 50px;
+    margin:auto;
+  }
+  
+  .form-control {
+    box-shadow: 0 10px 40px 0 #B0C1D9;
+  }
+  .form-control::placeholder  {
+    font-family: FontAwesome;
+  }
+  .search-bar{
+width: 500px;
+  }
