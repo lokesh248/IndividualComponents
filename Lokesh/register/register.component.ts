@@ -25,6 +25,8 @@ export class RegisterComponent implements OnInit {
   AadhaarScan:any;
   AddressProofScan:any;
   Pic:any;
+  Password:string;
+  Balance:number;
 
   consumer:Consumer;
 
@@ -34,7 +36,7 @@ export class RegisterComponent implements OnInit {
 
   public addUser()
   {
-    this.consumer = new Consumer(1234, this.Name, this.TypeOfAccount, this.Income, this.AadhaarNumber, this.DOB, this.PAN, this.Mobile, this.Email);
+    this.consumer = new Consumer(1234, this.Name, this.TypeOfAccount, this.Income, this.AadhaarNumber, this.DOB, this.PAN, this.Mobile, this.Email, this.Password, this.Balance);
 
     this.rs.insertRec(this.consumer);
   }

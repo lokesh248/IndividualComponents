@@ -47,10 +47,10 @@
         <input type="text" class="form-control" id="aadhaar_number" [(ngModel)]="AadhaarNumber" [ngModelOptions]="{standalone: true}" required minlength="12" maxlength="12" min="0" />
     </div>
 
-    <div class="form-group text-div">
+    <!-- <div class="form-group text-div">
         <label for="aadhaar_scan">Aadhaar Scan</label>
         <input type="file" class="form-control" id="aadhaar_scan" accept=".jpeg,.jpg,.png"/>
-    </div>
+    </div> -->
 
     <div class="form-group text-div">
         <label for="dob">Date of Birth</label>
@@ -73,14 +73,24 @@
     </div>
 
     <div class="form-group text-div">
-        <label for="address_proof">Address Proof Scan</label>
-        <input type="file" id="address_proof" class="form-control" accept=".jpeg,.jpg,.png,.pdf"/>
+        <label for="pass">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="Password" [ngModelOptions]="{standalone: true}" id="pass" required />
     </div>
 
     <div class="form-group text-div">
+        <label for="bal">Balance</label>
+        <input type="number" class="form-control" [(ngModel)]="Balance">
+    </div>
+
+    <!-- <div class="form-group text-div">
+        <label for="address_proof">Address Proof Scan</label>
+        <input type="file" id="address_proof" class="form-control" accept=".jpeg,.jpg,.png,.pdf"/>
+    </div> -->
+
+    <!-- <div class="form-group text-div">
         <label for="photograph">Photo of Yours</label>
         <input type="file" class="form-control" id="photograph" accept=".jpeg,.jpg,.png"/>
-    </div>
+    </div> -->
 
     <button (click)="addUser()" class="form-group text-div btn btn-primary">Register</button>
 </form>
