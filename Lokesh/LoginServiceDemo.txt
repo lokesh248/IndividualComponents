@@ -1,0 +1,19 @@
+constructor(public loginsvc:LoginsvcService) { }
+
+  cons:any;
+
+  result:Consumer;
+
+  ngOnInit()
+  {
+    this.loginsvc.getConsumer("abc@example.com").then((resp)=>{this.cons = resp; console.log(resp)});
+
+    //console.log(this.cons);
+  }
+
+  public serveCustomer()
+  {
+    this.result = <Consumer> this.cons;
+
+    console.log(this.result);
+  }
